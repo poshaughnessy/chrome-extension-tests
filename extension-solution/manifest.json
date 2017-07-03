@@ -1,13 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "Chrome Extension Test",
+  "name": "Chrome Extension (Fixed)",
   "description": "To test access to __data__ on SVG elements",
   "version": "1.0",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
-    "default_title": "Chrome Extension Test"
+    "default_title": "Chrome Extension (Fixed)"
   },
+  "web_accessible_resources": ["page-script.js"],
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"

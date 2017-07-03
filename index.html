@@ -5,14 +5,19 @@
   </head>
   <body>
     <h1>Chrome extension tests</h1>
-    <p>Instructions: instally the local Chrome extension from the <code>extension</code> directory. <a href="https://developer.chrome.com/extensions/getstarted#unpacked">Here's how</a></p>
-    <p>I am hoping it can get the <code>__data__</code> from the SVG elements, but it seems it can't.</p>
+    <h2>Instructions</h2>
+    <ol>
+      <li>Install the local Chrome extension from the <code>extension</code> directory. <a href="https://developer.chrome.com/extensions/getstarted#unpacked">Here's how</a></li>
+      <li>Go to the index page <a href="https://poshaughnessy.github.io/chrome-extension-tests/index.html">it's hosted here</a>, click the extension and click the revealed button.
+      <li>Check the console. It should output the data (200 and 400) but instead it is `undefined`.</li>
+    </ol>
     <svg width="600" height="400">
       <g>
         <rect x="0" width="200" y="200" height="200" fill="red"></rect>
         <rect x="200" width="200" height="400" fill="blue"></rect>
       </g>
     </svg>
+    <p><a href="https://github.com/poshaughnessy/chrome-extension-tests">Source on Github</a></p>
   </body>
   <script type="text/javascript">
     var rects = document.getElementsByTagName('rect');

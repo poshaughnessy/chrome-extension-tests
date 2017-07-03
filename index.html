@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chrome extension tests</title>
+  </head>
+  <body>
+    <h1>Chrome extension tests</h1>
+    <p>Instructions: instally the local Chrome extension from the <code>extension</code> directory. <a href="https://developer.chrome.com/extensions/getstarted#unpacked">Here's how</a></p>
+    <p>I am hoping it can get the <code>__data__</code> from the SVG elements, but it seems it can't.</p>
+    <svg width="600" height="400">
+      <g>
+        <rect x="0" width="200" y="200" height="200" fill="red"></rect>
+        <rect x="200" width="200" height="400" fill="blue"></rect>
+      </g>
+    </svg>
+  </body>
+  <script type="text/javascript">
+    var rects = document.getElementsByTagName('rect');
+    // This is the data we want to extract via the Chrome extension
+    rects[0].__data__ = 200;
+    rects[1].__data__ = 400;
+  </script>
+</html>
